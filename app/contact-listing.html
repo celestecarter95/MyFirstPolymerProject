@@ -1,0 +1,50 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/paper-item/paper-icon-item.html">
+<link rel="import" href="bower_components/paper-item.html">
+<link rel="import" href="bower_components/paper-item/paper-item-body.html">
+<link rel="import" href="bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="bower_components/iron-icons/communication-icons.html">
+<link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button.html">
+<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="bower_components/paper-styles/demo-pages.html">
+
+<dom-module id="contact-listing">
+    <style>
+    .avatar {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ccc;
+    }
+
+    .blue {
+      background-color: var(--paper-light-blue-300);
+    }
+    </style>
+
+    <template>
+        <paper-icon-item role="option" tabindex="0" aria-disable="false">
+            <img class="avatar blue" src="{{img}}" alt="man" item-icon>
+            <paper-item-body two-line>
+                <div>{{name}}</div>
+                <div secondary>{{email}}</div>
+            </paper-item-body>
+            <paper-icon-button icon="star" alt="favourite this!"></paper-icon-button>
+        </paper-icon-item>
+    </template>
+
+<script>
+    Polymer({
+        is: "contact-listing",
+        properties: {
+            name: String,
+            email: String,
+            img: String,
+        },
+    });
+</script>
