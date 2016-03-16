@@ -13,69 +13,69 @@
 <link rel="import" href="contact-listing.html">
 
 <dom-module id="contact-list">
-    <style>
-    .list {
-      @apply(--layout-vertical);
+  <style>
+  .list {
+    @apply(--layout-vertical);
 
-      padding-top: 12px;
-      background-color: white;
-      margin: 12px;
-      @apply(--shadow-elevation-2dp);
-    }
-    .container {
-      @apply(--layout-wrap);
-      @apply(--layout-center-center);
-      @apply(--layout-inline);
-    }
-    .flex {
-      @apply(--layout-flex);
-    }
-    </style>
+    padding-top: 12px;
+    background-color: white;
+    margin: 12px;
+    @apply(--shadow-elevation-2dp);
+  }
+  .container {
+    @apply(--layout-wrap);
+    @apply(--layout-center-center);
+    @apply(--layout-inline);
+  }
+  .flex {
+    @apply(--layout-flex);
+  }
+  </style>
 
-    <template>
-        <div class="container">
-            <div class="list" role="listbox">
+  <template>
+    <div class="container">
+      <div class="list" role="listbox">
 
-                <template is="dom-repeat" items="{{contacts}}">
-                    <contact-listing name="{{item.name}}" email="{{item.email}}" img="{{item.img}}"></contact-listing>
-                </template>
+        <template is="dom-repeat" items="{{contacts}}">
+          <contact-listing name="{{item.name}}" email="{{item.email}}" img="{{item.img}}"></contact-listing>
+        </template>
 
-            </div>
-        </div>
-    </template>
+      </div>
+    </div>
+  </template>
 </dom-module>
 
 <script>
-    Polymer({
-        is: "contact-list",
-        ready: function() {
-            this.contacts = [
-                {
-                    name: "Alexa",
-                    email: "Alexa@igloablstores.com",
-                    img: "https://randomuser.me/api/portraits/thumb/women/28.jpg"
-                },
-                {
-                    name: "Jade",
-                    email: "Jade@igloablstores.com",
-                    img: "https://randomuser.me/api/portraits/thumb/women/61.jpg"
-                },
-                {
-                    name: "Jade",
-                    email: "Jade@igloablstores.com",
-                    img: "https://randomuser.me/api/portraits/thumb/women/61.jpg"
-                },
-                {
-                    name: "Jade",
-                    email: "Jade@igloablstores.com",
-                    img: "https://randomuser.me/api/portraits/thumb/women/61.jpg"
-                },
-                {
-                    name: "Elizabeth",
-                    email: "Elizabeth@igloablstores.com",
-                    img: "https://randomuser.me/api/portraits/thumb/women/13.jpg"
-                }
-            ]
+  Polymer({
+    is: "contact-list",
+    ready: function() {
+      this.contacts = [
+        {
+          name: "Alexa",
+          email: "Alexa@igloablstores.com",
+          img: "https://randomuser.me/api/portraits/thumb/women/28.jpg"
+        },
+        {
+          name: "Jade",
+          email: "Jade@igloablstores.com",
+          img: "https://randomuser.me/api/portraits/thumb/women/61.jpg"
+        },
+        {
+          name: "Jade",
+          email: "Jade@igloablstores.com",
+          img: "https://randomuser.me/api/portraits/thumb/women/61.jpg"
+        },
+        {
+          name: "Jade",
+          email: "Jade@igloablstores.com",
+          img: "https://randomuser.me/api/portraits/thumb/women/61.jpg"
+        },
+        {
+          name: "Elizabeth",
+          email: "Elizabeth@igloablstores.com",
+          img: "https://randomuser.me/api/portraits/thumb/women/13.jpg"
         }
-    });
+      ]
+    }
+  });
 </script>
